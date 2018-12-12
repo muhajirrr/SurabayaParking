@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "889198845882",
+    "firebase_url": "https://surabayaparking-209617.firebaseio.com",
+    "project_id": "surabayaparking-209617",
+    "storage_bucket": "surabayaparking-209617.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:889198845882:android:727148a386c86233",
+        "android_client_info": {
+          "package_name": "com.sbyparking.car.surabayaparking"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "889198845882-bevg785irabg4of2ii8aemnctmmvp5v4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sbyparking.car.surabayaparking",
+            "certificate_hash": "59e6b9258a0b6196d8c4315f7394079c14eb90f7"
+          }
+        },
+        {
+          "client_id": "889198845882-t2g2nmgclg7p8fh4ntcvgqoe70tqhop6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAtsHssQfkAPZUvzEd5P7KbWbDytB3t48Y"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "889198845882-t2g2nmgclg7p8fh4ntcvgqoe70tqhop6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
