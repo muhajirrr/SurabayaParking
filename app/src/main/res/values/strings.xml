@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">SurabayaParking</string>
     <string name="title_activity_online">Map</string>
+    <string name="dialog_login_text">Anda harus login untuk menggunakan fitur chatroom.</string>
 </resources>

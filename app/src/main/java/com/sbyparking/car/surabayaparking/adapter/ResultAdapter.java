@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -14,10 +15,14 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.sbyparking.car.surabayaparking.R;
 import com.sbyparking.car.surabayaparking.ZoomDialog;
+import com.sbyparking.car.surabayaparking.activity.ChatroomActivity;
 import com.sbyparking.car.surabayaparking.activity.ResultActivity;
 import com.sbyparking.car.surabayaparking.model.Parking;
+import com.sbyparking.car.surabayaparking.util.LoginDialog;
 
 import java.util.List;
 
@@ -28,10 +33,12 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
     Context context;
 
     ResultActivity resultActivity;
+    FirebaseAuth mAuth;
 
     public ResultAdapter(List<Parking> parkingList, ResultActivity resultActivity) {
         this.parkingList = parkingList;
         this.resultActivity = resultActivity;
+        this.mAuth = FirebaseAuth.getInstance();
     }
 
     @NonNull
@@ -69,6 +76,22 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
             }
         });
 
+        holder.btnChat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FirebaseUser currentUser = mAuth.getCurrentUser();
+
+                if (currentUser == null) {
+                    LoginDialog loginDialog = new LoginDialog();
+                    loginDialog.show(((FragmentActivity)context).getSupportFragmentManager(), "login dialog");
+                } else {
+                    Intent chatroomIntent = new Intent(context, ChatroomActivity.class);
+                    chatroomIntent.putExtra("parkingId", parking.id);
+                    context.startActivity(chatroomIntent);
+                }
+            }
+        });
+
         holder.ivFoto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -101,6 +124,7 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
         public TextView tvhargaMotor;
         public TextView tvJamOperasional;
         public Button btnDirection;
+        public Button btnChat;
 
         public ViewHolder(View view) {
             super(view);
@@ -114,6 +138,7 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
             tvJamOperasional = view.findViewById(R.id.tvJamOperasional);
 
             btnDirection = view.findViewById(R.id.btnDirection);
+            btnChat = view.findViewById(R.id.btnChat);
 
             view.setOnClickListener(new View.OnClickListener() {
                 @Override

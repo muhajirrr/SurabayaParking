@@ -123,11 +123,12 @@ public class TblParking {
         this.foto = foto;
     }
 
-    public static long insertParking(String pencarianZona, String saranZona, String waktuTempuh
+    public static void insertParking(int id, String pencarianZona, String saranZona, String waktuTempuh
             , String hargaTiketMobil, String hargaTiketMotor, String jamOperasional, int foto
             , String lat, String lng
     ) {
         ContentValues values = new ContentValues();
+        values.put(COLUMN_ID, id);
         values.put(COLUMN_PENCARIAN_ZONA, pencarianZona);
         values.put(COLUMN_SARAN_ZONA, saranZona);
         values.put(COLUMN_WAKTU_TEMPUH, waktuTempuh);
@@ -139,10 +140,8 @@ public class TblParking {
         values.put(COLUMN_LNG, lng);
 
         SQLiteDatabase db = Database.instance.getWritableDatabase();
-        long id = db.insert(TABLE_NAME, null, values);
+        db.insert(TABLE_NAME, null, values);
         db.close();
-
-        return id;
     }
 
     public static void clearTable() {

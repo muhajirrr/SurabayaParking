@@ -1,35 +1,35 @@
 {
   "project_info": {
-    "project_number": "755003666798",
-    "firebase_url": "https://surabaya-parking.firebaseio.com",
-    "project_id": "surabaya-parking",
-    "storage_bucket": "surabaya-parking.appspot.com"
+    "project_number": "889198845882",
+    "firebase_url": "https://surabayaparking-209617.firebaseio.com",
+    "project_id": "surabayaparking-209617",
+    "storage_bucket": "surabayaparking-209617.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:755003666798:android:727148a386c86233",
+        "mobilesdk_app_id": "1:889198845882:android:727148a386c86233",
         "android_client_info": {
           "package_name": "com.sbyparking.car.surabayaparking"
         }
       },
       "oauth_client": [
         {
-          "client_id": "755003666798-qvn8go600fqpte6kv3lk55p88rstcc6b.apps.googleusercontent.com",
+          "client_id": "889198845882-bevg785irabg4of2ii8aemnctmmvp5v4.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.sbyparking.car.surabayaparking",
-            "certificate_hash": "e473d30427b741c4a0f88fcd7b447ef70fa263e6"
+            "certificate_hash": "59e6b9258a0b6196d8c4315f7394079c14eb90f7"
           }
         },
         {
-          "client_id": "755003666798-loq4sd3e2v4emmsf3ftodc7vdsagkcl1.apps.googleusercontent.com",
+          "client_id": "889198845882-t2g2nmgclg7p8fh4ntcvgqoe70tqhop6.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCVjN4cQwz9FybMtRQSUYAgLFmlAxnMwxc"
+          "current_key": "AIzaSyAtsHssQfkAPZUvzEd5P7KbWbDytB3t48Y"
         }
       ],
       "services": {
@@ -40,7 +40,7 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "755003666798-loq4sd3e2v4emmsf3ftodc7vdsagkcl1.apps.googleusercontent.com",
+              "client_id": "889198845882-t2g2nmgclg7p8fh4ntcvgqoe70tqhop6.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

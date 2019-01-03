@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/tvChatDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="26 Agustus 2018"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="12dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:background="@drawable/bg_shape_capsule"
+        android:textColor="@color/black"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivChatProfileImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tvChatDisplayName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tvChatMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/chat_background_right"
+        android:padding="12dp"
+        android:text="Message"
+        android:textSize="16sp"
+        android:textColor="@android:color/white"
+        android:layout_below="@id/tvChatDate"/>
+
+    <ImageView
+        android:id="@+id/ivImageMessage"
+        android:layout_width="240dp"
+        android:layout_height="160dp"
+        android:layout_alignParentEnd="true"
+        android:scaleType="centerCrop"
+        android:layout_below="@id/tvChatDate"/>
+
+    <TextView
+        android:id="@+id/tvChatTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/tvChatMessage"
+        android:layout_toStartOf="@id/tvChatMessage"
+        android:layout_marginEnd="4dp"
+        android:text="14:45"/>
+
+    <TextView
+        android:id="@+id/tvImageTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/ivImageMessage"
+        android:layout_toStartOf="@id/ivImageMessage"
+        android:layout_marginEnd="4dp"
+        android:text="14:45"/>
+
+</RelativeLayout>
